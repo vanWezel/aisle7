@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+/* A calm, dusky take on the Windows 3.x look of the terminal app. */
+@theme {
+  --color-chrome: #1c1f2b;
+  --color-pane: #0a0b10;
+  --color-ink: #f2eee2;
+  --color-dim: #b3b8c6;
+  --color-hi: #66708a; /* bevel highlight */
+  --color-sh: #000; /* bevel shadow */
+  --color-track: #454c60;
+  --color-title: #26358a;
+  --color-gold: #ffd700;
+  --color-ok: #7ee08a;
+  --color-warn: #ffa94d;
+  --color-rent: #6cc0ff;
+  --color-bad: #ff7b7b;
+  --font-body: 'VT323', ui-monospace, monospace;
+  --font-display: 'Press Start 2P', 'VT323', monospace;
+}
+
+/* Raised: light edge top/left. Sunken: the reverse. */
+@utility bevel-raised {
+  border: 2px solid;
+  border-color: var(--color-hi) var(--color-sh) var(--color-sh) var(--color-hi);
+}
+@utility bevel-sunken {
+  border: 2px solid;
+  border-color: var(--color-sh) var(--color-hi) var(--color-hi) var(--color-sh);
+}
+
+@layer base {
+  html { font-size: 20px; color-scheme: dark; } /* VT323 is small for its size */
+  body { @apply bg-pane font-body leading-tight text-ink; }
+  :focus-visible { outline: 1px dotted var(--color-gold); outline-offset: 2px; }
+  select {
+    appearance: none;
+    background: var(--color-pane) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0h10L5 6z' fill='%23f2eee2'/%3E%3C/svg%3E") no-repeat right 8px center;
+  }
+  input[type='checkbox'] { @apply bevel-sunken bg-pane m-0 inline-grid size-[18px] shrink-0 appearance-none place-content-center p-0; }
+  input[type='checkbox']:checked::after { content: 'x'; line-height: 1; }
+  ::-webkit-scrollbar { width: 16px; height: 16px; background: var(--color-track); }
+  ::-webkit-scrollbar-thumb { @apply bevel-raised bg-chrome; }
+  ::-webkit-scrollbar-corner { background: var(--color-chrome); }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <title>Aisle 7</title>
+  <!-- gold frame, indigo field (corners notched like a ticket) -->
+  <path fill="#ffd700" d="M2 1h12v1h1v12h-1v1H2v-1H1V2h1z"/>
+  <path fill="#26358a" d="M3 2h10v1h1v10h-1v1H3v-1H2V3h1z"/>
+  <!-- film-strip perforations -->
+  <g fill="#ffd700"><rect x="3" y="3" width="1" height="1"/><rect x="12" y="3" width="1" height="1"/><rect x="3" y="12" width="1" height="1"/><rect x="12" y="12" width="1" height="1"/></g>
+  <!-- the 7: rose drop shadow, then gold -->
+  <g fill="#b04a4a"><rect x="5" y="5" width="8" height="2"/><rect x="10" y="7" width="3" height="2"/><rect x="9" y="9" width="3" height="2"/><rect x="8" y="11" width="3" height="2"/></g>
+  <g fill="#ffd700"><rect x="4" y="4" width="8" height="2"/><rect x="9" y="6" width="3" height="2"/><rect x="8" y="8" width="3" height="2"/><rect x="7" y="10" width="3" height="2"/></g>
+</svg>
