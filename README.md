@@ -39,3 +39,7 @@ announced once. It works with a Home Assistant webhook trigger.
 - Data comes from JustWatch's unofficial GraphQL API, which can change without notice.
 - The web app has no login. Keep it on your own network.
 - Go with Gin for the API, React, Vite and Tailwind CSS for the web app.
+
+## License
+
+[MIT](LICENSE)
