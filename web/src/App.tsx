@@ -174,9 +174,11 @@ export default function App() {
       <header className="sticky top-0 z-10 flex items-center gap-4 bg-title px-2 py-2 sm:px-3">
         <h1 className="flex min-w-0 items-center gap-2">
           <img src="/logo.svg" alt="" className="size-8 shrink-0 [image-rendering:pixelated]" />
-          <span className="font-display text-[.65rem] leading-snug tracking-widest whitespace-nowrap text-gold [text-shadow:2px_2px_0_var(--color-sh)]">
+          <span className="relative top-0.5 font-display text-[.65rem] leading-none tracking-widest whitespace-nowrap text-gold [text-shadow:2px_2px_0_var(--color-sh)]">
             AISLE 7
-            <small className="mt-1.5 block font-body text-base tracking-[.35em] text-ink [text-shadow:none]">VIDEO GUIDE</small>
+            <small className="mt-1 block leading-none font-body text-base tracking-[.35em] text-ink [text-shadow:none]">
+              VIDEO GUIDE
+            </small>
           </span>
         </h1>
         <span role="status" className="ml-auto hidden whitespace-nowrap sm:inline text-ink">
